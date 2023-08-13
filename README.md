@@ -2,7 +2,7 @@
 Proyecto creado para realizar mejoras en la inscripción de procesos administrativos de la universidad distrital.
 
 
-# Para la conexion de whatsApp
+# Para la conexion de WhatsApp
 Las cedenciales para la aplicacion de "https://www.twilio.com", son:
  - jdcamargouseche@gmail.com
  - JuanDavid14242023*
