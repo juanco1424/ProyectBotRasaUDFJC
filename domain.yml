@@ -2,32 +2,138 @@ version: "3.1"
 
 intents:
   - greet
+  - welcome 
   - goodbye
   - affirm
   - deny
-  - mood_great
-  - mood_unhappy
+  - inquire_violence
+  - report_abuse
+  - support
+  - thanks
+  - help
+  - emergency
+  - ask_resources
+  - ask_laws
+  - emotional_support
+  - clarify_information
+  - feedback
+  - confidentiality
+  - connect_human
   - bot_challenge
+  - bot_capabilities
+  - story_sharing
+  - safety_plan
+  - local_services
+  - posible_emergency
+  - mi_nombre
+  - mobile_number
+  - localities
+
+
+entities:
+  - location 
+  - type_of_violence
+  - resource_type
+  - law_related
+  - emotion
+  - time_period
+  - personal_relation
+  - age
+  - gender
+  - feedback_type
+  - safety_item
+  - service_name
+  - confidentiality_concern
+  - personal_name
+  - phone_number
+  - address
+  - locations
+
+slots:
+  dame:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_text
+  number:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: from_text
 
 responses:
+
+
+  utter_mi_nombre:
+    - text: "¿Cuál es tu {name}?"
+  utter_mobile_number:
+    - text: "¿Cuál es tu número de celular?"
   utter_greet:
-  - text: "Hey! How are you?"
-
+    - text: "Hola, ¿en qué puedo ayudarte hoy?"
   utter_cheer_up:
-  - text: "Here is something to cheer you up:"
-    image: "https://i.imgur.com/nGF1K8f.jpg"
-
+    - text: "Aquí tienes algo para animarte:"
+      image: "https://i.imgur.com/nGF1K8f.jpg"
   utter_did_that_help:
-  - text: "Did that help you?"
-
+    - text: "¿Te ayudó eso?"
   utter_happy:
-  - text: "Great, carry on!"
-
+    - text: "Me alegra escuchar eso. ¿Hay algo más en lo que pueda ayudarte?"
   utter_goodbye:
-  - text: "Bye"
-
+    - text: "Adiós"
+    - text: "Hasta luego, si necesitas más ayuda, no dudes en volver."
   utter_iamabot:
-  - text: "I am a bot, powered by Rasa."
+    - text: "Soy un bot, impulsado por Rasa."
+  utter_violence_information:
+    - text: "Entiendo que estás buscando información sobre violencia intrafamiliar. ¿En qué específicamente puedo ayudarte?"
+  utter_abuse_report:
+    - text: "Lamento escuchar que estás experimentando abuso"
+      buttons:
+        - title: Sí
+          payload: /affirm
+        - title: No
+          payload: /deny
+  utter_support_resources:
+    - text: "Puedo proporcionarte recursos para víctimas de violencia intrafamiliar. ¿En qué localidad  te encuentras?"
+  utter_thanks:
+    - text: "De nada, estoy aquí para ayudar. Si tienes más preguntas, no dudes en preguntar."
+  utter_help:
+    - text: "Por supuesto, estoy aquí para ayudarte. ¿Puedes proporcionarme más detalles sobre tu situación?"
+  utter_emergency:
+    - text: "Esto suena como una emergencia. Por favor, proporciona más detalles o contacta a las autoridades locales."
+  utter_bot_capabilities:
+    - text: "Puedo ayudarte con información sobre violencia, ofrecerte recursos, apoyo emocional, y conectarte con un asesor humano."
+  utter_local_services_info:
+    - text: "Aquí tienes información sobre los servicios locales en tu área..."
+  utter_connect_to_human_counselor:
+    - text: "Conectando con un asesor humano. Por favor espera un momento..."
+  utter_ask_location:
+    - text: "¿Estas en la localidad de Usme?"
+  utter_confidentiality_assurance:
+    - text: "Tu confidencialidad es nuestra principal prioridad. No compartiremos tu información sin tu consentimiento."
+  utter_thanks_response:
+    - text: "Estamos aquí para ayudarte. Cuídate."
+  utter_ask_type_of_violence:
+    - text: "Aquí está la información sobre el tipo de violencia."
+  utter_safety_plan_guidance:
+    - text: "Aquí hay algunas pautas para tu plan de seguridad..."
+  utter_emotional_support_message:
+    - text: "Entiendo que estás pasando por un momento difícil. Estamos aquí para apoyarte."
+  utter_provide_legal_advice:
+    - text: "Aquí tienes la información legal que necesitas..."
+  
+  utter_posible_emergency:
+    - text: "Estoy  para ayudarte"
+ 
+
+  utter_welcome:
+  - text: "Para tu seguridad debes aceptar los términos y condiciones."
+    buttons:
+      - title: "Acepto"
+        payload: "/affirm"
+      - title: "No Acepto"
+        payload: "/deny"
+      - title: "Términos"
+        payload: "/terms"
+
 
 session_config:
   session_expiration_time: 60

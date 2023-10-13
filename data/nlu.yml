@@ -1,91 +1,206 @@
 version: "3.1"
 
 nlu:
+
+- intent: mi_nombre
+  examples: |
+    - mi nombre es [paola](nombre)
+    - [paola](nombre) es mi nombre 
+
+- intent: mobile_number
+  examples: |
+    - mi numero es [3508966918](number)
+    - [3508966918](number) es mi número 
+    - mi número celular es [3508966918](number)
+
 - intent: greet
   examples: |
-    - hey
-    - hello
-    - hi
-    - hello there
-    - good morning
-    - good evening
-    - moin
-    - hey there
-    - let's go
-    - hey dude
-    - goodmorning
-    - goodevening
-    - good afternoon
+    - Hola
+    - ¡Hola!
+    - Buen día
+    - Buenas tardes
+    - Buenas noches
+    
 
 - intent: goodbye
   examples: |
-    - cu
-    - good by
-    - cee you later
-    - good night
-    - bye
-    - goodbye
-    - have a nice day
-    - see you around
-    - bye bye
-    - see you later
+    - Adiós
+    - Hasta luego
+    - Nos vemos
+    - Chao
+    - Hasta pronto
 
 - intent: affirm
   examples: |
-    - yes
-    - y
-    - indeed
-    - of course
-    - that sounds good
-    - correct
+    - Sí
+    - Correcto
+    - Exacto
+    - Por supuesto
+    - Claro que sí
 
 - intent: deny
   examples: |
-    - no
-    - n
-    - never
-    - I don't think so
-    - don't like that
-    - no way
-    - not really
+    - No
+    - No creo
+    - No estoy seguro
+    - Prefiero no decir
+    - No, gracias
 
-- intent: mood_great
+- intent: inquire_violence
   examples: |
-    - perfect
-    - great
-    - amazing
-    - feeling like a king
-    - wonderful
-    - I am feeling very good
-    - I am great
-    - I am amazing
-    - I am going to save the world
-    - super stoked
-    - extremely good
-    - so so perfect
-    - so good
-    - so perfect
+    - Dime más sobre violencia
+    - ¿Qué es violencia intrafamiliar?
+    - Quiero saber sobre violencia
+    - ¿Qué tipos de violencia existen?
+    - Información sobre violencia
 
-- intent: mood_unhappy
+- intent: report_abuse
   examples: |
-    - my day was horrible
-    - I am sad
-    - I don't feel very well
-    - I am disappointed
-    - super sad
-    - I'm so sad
-    - sad
-    - very sad
-    - unhappy
-    - not good
-    - not very good
-    - extremly sad
-    - so saad
-    - so sad
+    - Quiero denunciar un abuso
+    - Creo que soy víctima de abuso
+    - Me están maltratando
+    - ¿Cómo denuncio un abuso?
+    - Necesito ayuda, soy víctima
+
+- intent: support
+  examples: |
+    - ¿Dónde puedo encontrar apoyo?
+    - Necesito apoyo emocional
+    - ¿Me puedes ayudar?
+    - ¿Dónde busco ayuda?
+    - ¿Con quién puedo hablar?
+    - Necesito ayuda
+    - necesito ayuda
+    - Ayuda
+    - ayuda
+
+- intent: thanks
+  examples: |
+    - Gracias
+    - Te agradezco
+    - Muchas gracias
+    - Aprecio tu ayuda
+    - Gracias por la información
+
+- intent: help
+  examples: |
+    - Ayuda
+    - Necesito ayuda
+    - ¿Puedes ayudarme?
+    - Estoy en problemas
+    - ¿Dónde busco ayuda?
+
+- intent: emergency
+  examples: |
+    - Es una emergencia
+    - ¡Ayuda urgente!
+    - Necesito ayuda inmediata
+    - Estoy en peligro
+    - ¡Es urgente!
+
+- intent: ask_resources
+  examples: |
+    - ¿Qué recursos hay disponibles?
+    - ¿Dónde puedo encontrar más recursos?
+    - ¿Tienes recursos para compartir?
+    - Recursos sobre violencia
+    - Necesito recursos
+
+- intent: ask_laws
+  examples: |
+    - ¿Qué leyes protegen a las víctimas?
+    - Dime sobre las leyes
+    - ¿Dónde puedo leer sobre las leyes?
+    - Leyes de violencia
+    - Información legal
+
+ 
+- intent:localities
+  examples: |
+    - Usme
+    - Chapinero
+    - Teusaquillo
+    - Ciudad Bolivar
+    - Engativa
+
+ 
+
+- intent: emotional_support
+  examples: |
+    - Necesito apoyo emocional
+    - ¿Puedes consolarme?
+    - Me siento mal
+    - Estoy triste
+    - Necesito alguien con quien hablar
+
+- intent: clarify_information
+  examples: |
+    - No entendí bien, ¿puedes explicar?
+    - ¿Qué significa eso?
+    - Puedes ser más claro
+    - No estoy seguro de entender
+    - ¿Puedes repetir?
+
+- intent: feedback
+  examples: |
+    - Tengo un comentario
+    - Quiero dar retroalimentación
+    - Mi opinión es
+    - Esto me parece
+    - Tengo una sugerencia
+
+- intent: confidentiality
+  examples: |
+    - ¿Es esto confidencial?
+    - ¿Mis datos están seguros?
+    - ¿Garantizas privacidad?
+    - Quiero que esto sea privado
+    - No quiero que nadie se entere
+
+- intent: connect_human
+  examples: |
+    - ¿Puedo hablar con una persona real?
+    - Necesito un humano
+    - ¿Hay alguien ahí?
+    - Prefiero hablar con alguien
+    - ¿Está disponible un consejero?
 
 - intent: bot_challenge
   examples: |
-    - are you a bot?
-    - are you a human?
-    - am I talking to a bot?
-    - am I talking to a human?
+    - ¿Eres un bot?
+    - ¿Eres real?
+    - ¿Eres una máquina?
+    - ¿Eres humano?
+    - ¿Qué eres?
+
+- intent: bot_capabilities
+  examples: |
+    - ¿Qué puedes hacer?
+    - ¿Cuáles son tus capacidades?
+    - ¿Qué servicios ofreces?
+    - ¿Hasta dónde puedes ayudar?
+    - ¿Qué información tienes?
+
+- intent: story_sharing
+  examples: |
+    - Quiero compartir mi historia
+    - Esto me pasó a mí
+    - Quiero que sepas lo que viví
+    - Tengo una experiencia que contar
+    - Quiero hablar de mi situación
+
+- intent: safety_plan
+  examples: |
+    - ¿Qué es un plan de seguridad?
+    - ¿Cómo hago un plan de seguridad?
+    - Necesito un plan para protegerme
+    - Quiero un plan de emergencia
+    - ¿Tienes consejos para mantenerme seguro?
+
+- intent: local_services
+  examples: |
+    - ¿Qué servicios hay en mi localidad?
+    - ¿Dónde encuentro ayuda cerca?
+    - Servicios en mi área
+    - ¿Hay centros de ayuda aquí?
+    - Busco servicios locales

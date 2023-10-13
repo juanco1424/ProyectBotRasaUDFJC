@@ -1,30 +1,90 @@
 version: "3.1"
 
 stories:
-
-- story: happy path
+- story: Seek legal advice for sexual violence
   steps:
   - intent: greet
   - action: utter_greet
-  - intent: mood_great
-  - action: utter_happy
-
-- story: sad path 1
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: mood_unhappy
-  - action: utter_cheer_up
-  - action: utter_did_that_help
+  - intent: report_abuse
+  - action: utter_report_abuse
   - intent: affirm
-  - action: utter_happy
+  - action: utter_support_resources
+  - intent: localities
 
-- story: sad path 2
+
+
+
+- story: Seek legal advice for economic violence
   steps:
   - intent: greet
   - action: utter_greet
-  - intent: mood_unhappy
+  - intent: inquire_violence
+  - action: utter_violence_information
+  - intent: welcome 
+  - action: utter_welcome
+  - intent: report_abuse
+    entities:
+      - type_of_violence: "economica"
+  - action: utter_ask_location
+  - action: utter_abuse_report
+  - intent: affirm
+  - action: utter_support_resources
+  - intent: emotional_support
   - action: utter_cheer_up
-  - action: utter_did_that_help
-  - intent: deny
+  - intent: thanks
+  - action: utter_thanks
+  - intent: goodbye
   - action: utter_goodbye
+
+
+- story: Seek legal advice for phisic violence
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: inquire_violence
+  - action: utter_violence_information
+  - intent: welcome 
+  - action: utter_welcome
+  - intent: report_abuse
+    entities:
+      - type_of_violence: "fisica"
+  - action: utter_ask_location
+  - action: utter_abuse_report
+  - intent: affirm
+  - action: utter_support_resources
+  - intent: emotional_support
+  - action: utter_cheer_up
+  - intent: thanks
+  - action: utter_thanks
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: Seek legal advice for psicologic violence
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: inquire_violence
+  - action: utter_violence_information
+  - intent: welcome 
+  - action: utter_welcome
+  - intent: report_abuse
+    entities:
+      - type_of_violence: "Psicologica"
+  - action: utter_ask_location
+  - action: utter_abuse_report
+  - intent: affirm
+  - action: utter_support_resources
+  - intent: emotional_support
+  - action: utter_cheer_up
+  - intent: thanks
+  - action: utter_thanks
+  - intent: goodbye
+  - action: utter_goodbye
+
+
+
+- story: Provide resources and legal advice for reported abuse
+  steps:
+  - intent: report_abuse
+  - action: utter_ask_location
+  - action: utter_provide_legal_advice

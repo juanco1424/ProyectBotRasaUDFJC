@@ -1,13 +1,60 @@
-version: "3.1"
-
 rules:
+- rule: Greet user
+  steps:
+  - intent: greet
+  - action: utter_greet
 
-- rule: Say goodbye anytime the user says goodbye
+- rule: Say goodbye to user
   steps:
   - intent: goodbye
   - action: utter_goodbye
 
-- rule: Say 'I am a bot' anytime the user challenges
+- rule: Provide information on violence
+  steps:
+  - intent: inquire_violence
+  - action: utter_violence_information
+
+- rule: Provide emotional support
+  steps:
+  - intent: emotional_support
+  - action: utter_cheer_up
+
+- rule: Provide safety plan
+  steps:
+  - intent: safety_plan
+  - action: utter_help
+
+- rule: Reassure confidentiality
+  steps:
+  - intent: confidentiality
+  - action: utter_confidentiality_assurance
+
+- rule: Connect to human counselor
+  steps:
+  - intent: connect_human
+  - action: utter_connect_to_human_counselor
+
+- rule: Respond to bot challenge
   steps:
   - intent: bot_challenge
   - action: utter_iamabot
+
+- rule: Share bot capabilities
+  steps:
+  - intent: bot_capabilities
+  - action: utter_bot_capabilities
+
+- rule: Provide local services info
+  steps:
+  - intent: local_services
+  - action: utter_local_services_info
+
+- rule: Provide thanks response
+  steps:
+  - intent: thanks
+  - action: utter_thanks
+
+- rule: Provide help
+  steps:
+  - intent: help
+  - action: utter_help
