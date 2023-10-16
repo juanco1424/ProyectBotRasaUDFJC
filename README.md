@@ -81,3 +81,39 @@ Nuestro objetivo es mejorar la experiencia en los procesos administrativos de la
 - La tabla `Conversaciones` se relaciona con `Usuarios`, `Status` y `Recursos`.
 - La tabla `Interacciones` se relaciona con `Conversaciones`, `Usuarios` y `TiposDeViolencias`.
 - La tabla `Agendas` se relaciona con `Usuarios` y `Asesores`.
+# Ejecución del archivo `docker-compose.yml`
+
+## Prerrequisitos
+
+1. **Docker**: Asegúrate de tener Docker instalado en tu máquina. Si aún no lo has hecho, puedes obtenerlo desde [Docker official site](https://www.docker.com/get-started).
+2. **Docker Compose**: Asegúrate de tener Docker Compose instalado. Si aún no lo has hecho, consulta la [documentación oficial de instalación](https://docs.docker.com/compose/install/). Puedes comprobar si está instalado con el comando:
+    ```bash
+    docker-compose --version
+    ```
+
+## Pasos para la ejecución
+
+1. **Navega a la carpeta del proyecto**: Abre una terminal y navega a la carpeta donde se encuentra tu archivo `docker-compose.yml`.
+    ```bash
+    cd /ProyectoPaola
+    ```
+
+2. **Ejecuta el archivo `docker-compose.yml`**: Inicia tus servicios definidos en `docker-compose.yml` usando el siguiente comando:
+    ```bash
+    docker-compose up
+    ```
+
+    *Nota*: Si quieres ejecutarlo en segundo plano, usa:
+    ```bash
+    docker-compose up -d
+    ```
+
+3. **Verifica que los servicios estén en ejecución**: Puedes ver el estado de tus servicios con el siguiente comando:
+    ```bash
+    docker-compose ps
+    ```
+
+4. **Detener los servicios**: Cuando hayas terminado y desees detener los servicios, simplemente ejecuta:
+    ```bash
+    docker-compose down o Ctrl + C para bajar el servidor
+    ```
