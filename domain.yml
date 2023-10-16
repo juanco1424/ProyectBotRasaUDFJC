@@ -8,6 +8,10 @@ intents:
   - mood_great
   - mood_unhappy
   - bot_challenge
+  - saludar
+  - proporcionar_nombre
+  - potential_violence
+  - inquire_violence_definition
 
 responses:
   utter_greet:
@@ -23,11 +27,57 @@ responses:
   utter_happy:
   - text: "Great, carry on!"
 
+  utter_potential_violence:
+  - text: "Lo siento, pareces estar pasando por un momento difícil. ¿quieres mas información para comunicarte con alguna entidad y ayudarte?"
+
+  utter_affirm_violence:
+  - text: "Por favor, considera llamar al siguiente número para obtener ayuda y apoyo: +57 3142213013. Están especializados en brindar asistencia en situaciones como la tuya."
+
+  utter_violence_definition:
+  - text: |
+      La violencia se refiere a acciones físicas, verbales o psicológicas que tienen la intención de dañar, herir o intimidar a otra persona o grupo.
+      Puede manifestarse de diversas maneras, incluyendo la violencia física, como golpes o agresiones; la violencia sexual; la violencia psicológica, como amenazas, coerción o privación; y la violencia estructural, que puede ser manifestada a través de sistemas o estructuras que perpetúan el desequilibrio de poder y la discriminación.
+      Es un fenómeno complejo que puede surgir debido a múltiples factores, incluyendo culturales, sociales, económicos y personales.
+      ¿Tienes alguna otra pregunta?
+
+  utter_violence_types:
+  - text: |
+      La violencia se clasifica en varios tipos según diferentes criterios. Algunos de los tipos más comunes incluyen:
+      - **Violencia física**: Se refiere a la agresión que causa daño o dolor físico a la víctima, como golpes o heridas.
+      - **Violencia sexual**: Involucra actos sexuales forzados o cualquier tipo de violación de la integridad sexual de una persona.
+      - **Violencia psicológica o emocional**: Engloba actos como amenazas, humillaciones, manipulación o cualquier otro que afecte la salud mental de la víctima.
+      - **Violencia económica**: Se manifiesta al privar o limitar los recursos económicos a una persona con el propósito de someterla.
+      - **Violencia estructural**: Está arraigada en las estructuras sociales y refleja desigualdades sistémicas, como el racismo o la discriminación de género.
+      Estos son solo algunos ejemplos y la violencia puede manifestarse de muchas otras formas y contextos.
+
   utter_goodbye:
-  - text: "Bye"
+  - text: "Ok, Hasta luego"
 
   utter_iamabot:
   - text: "I am a bot, powered by Rasa."
+
+  utter_pregunta:
+  - text: "¿Cuál es tu pregunta?"
+  
+  utter_pregunta_nombre:
+  - text: "¿Cuál es tu nombre?"
+
+  utter_saludo_personalizado:
+  - text: "Hola {nombre}, ¿cómo estás?, en que te puedo ayudar"
+
+entities:
+  - nombre
+
+slots:
+  nombre:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: nombre
+
+actions:
+  - action_guardar_nombre
+  - utter_saludo_personalizado
 
 session_config:
   session_expiration_time: 60

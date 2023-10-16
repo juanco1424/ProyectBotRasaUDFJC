@@ -3,51 +3,120 @@ version: "3.1"
 nlu:
 - intent: greet
   examples: |
-    - hey
-    - hello
-    - hi
-    - hello there
-    - good morning
-    - good evening
-    - moin
-    - hey there
-    - let's go
-    - hey dude
-    - goodmorning
-    - goodevening
-    - good afternoon
+    - hola
+    - hola
+    - hola
+    - hola ahí
+    - buenos días
+    - buenas noches
+    - hola ahí
+    - vamos
+    - hola amigo
+    - buenos días
+    - buenas noches
+    - buenas tardes
 
 - intent: goodbye
   examples: |
-    - cu
-    - good by
-    - cee you later
-    - good night
-    - bye
-    - goodbye
-    - have a nice day
-    - see you around
-    - bye bye
-    - see you later
+    - nos vemos
+    - adiós
+    - hasta luego
+    - buenas noches
+    - chao
+    - hasta la vista
+    - que tengas un buen día
+    - nos vemos luego
+    - chao chao
+    - hasta después
+
+- intent: potential_violence
+  examples: |
+    - ¿Es normal que mi pareja me grite todo el tiempo?
+    - Mi esposo me amenazó, ¿qué debo hacer?
+    - Tengo miedo de volver a casa esta noche.
+    - ¿Es normal sentir miedo de alguien que dice amarte?
+    - Mi jefe me acosa constantemente.
+    - Me siento atrapada en mi propia casa.
+    - Mi pareja revisa mi teléfono sin mi permiso.
+    - ¿Dónde puedo encontrar refugios para mujeres?
+    - Me da miedo hablar sobre lo que pasa en casa.
+    - ¿Qué hago si alguien me persigue?
+    - ¿Dónde puedo reportar abuso?
+    - Mi novio se pone violento cuando bebe.
+    - Siento que no puedo hablar con nadie sobre esto.
+    - No sé cómo salir de esta relación.
+    - Me siento insegura todo el tiempo.
+    - No me dejan ver a mis amigos o familia.
+    - Mi pareja me ha golpeado más de una vez.
+    - Siento que estoy en peligro.
+    - ¿Hay líneas de ayuda para personas en situaciones como la mía?
+    - No tengo a dónde ir, estoy atrapada.
+
+- intent: inquire_violence_definition
+  examples: |
+    - ¿Qué es la violencia?
+    - Explícame qué significa violencia
+    - Define violencia para mí
+    - ¿Cómo se describe la violencia?
+    - ¿Qué se entiende por violencia?
+    - ¿Puedes decirme qué es violencia?
+    - Dime, ¿qué es exactamente la violencia?
+    - ¿Qué representa la violencia?
+
+- intent: inquire_violence_types
+  examples: |
+    - ¿Cuáles son los tipos de violencia?
+    - Enumera los diferentes tipos de violencia
+    - ¿Qué clases de violencia existen?
+    - ¿Cómo se clasifica la violencia?
+    - ¿En qué categorías se divide la violencia?
+    - ¿Puedes decirme las variedades de violencia?
+    - Dime, ¿qué tipos de violencia hay?
+    - ¿Qué formas de violencia conoces?
 
 - intent: affirm
   examples: |
-    - yes
-    - y
-    - indeed
-    - of course
-    - that sounds good
-    - correct
+    - sí
+    - si
+    - s
+    - efectivamente
+    - por supuesto
+    - suena bien
+    - correcto
 
 - intent: deny
   examples: |
     - no
     - n
-    - never
-    - I don't think so
-    - don't like that
-    - no way
-    - not really
+    - nunca
+    - no lo creo
+    - no me gusta eso
+    - de ninguna manera
+    - no realmente
+
+- intent: saludar
+  examples: |
+    - ¡Hola!
+    - Buen día.
+    - Hola, ¿cómo estás?
+
+- intent: proporcionar_nombre
+  examples: |
+    - Mi nombre es [Julian](nombre)
+    - Mi nombre es [Daniel](nombre)
+    - Mi nombre es [Juan](nombre)
+    - Mi nombre es [Danilo](nombre)
+    - Mi nombre es [Erik](nombre)
+    - Puedes llamarme [María](nombre)
+    - Soy [Pedro](nombre)
+    - Llámame [Sofía](nombre)
+    - Soy [Carlos](nombre)
+    - Puedes llamarme [Charlie](nombre)
+    - Mi nombre es [Carlitos](nombre)
+
+##-----------------------------------------------------------------------------##
+
+
 
 - intent: mood_great
   examples: |
