@@ -12,6 +12,7 @@ intents:
   - proporcionar_nombre
   - potential_violence
   - inquire_violence_definition
+  - inquire_violence_types
 
 responses:
   utter_greet:
@@ -56,7 +57,7 @@ responses:
   utter_iamabot:
   - text: "I am a bot, powered by Rasa."
 
-  utter_pregunta:
+  utter_affirm:
   - text: "¿Cuál es tu pregunta?"
   
   utter_pregunta_nombre:

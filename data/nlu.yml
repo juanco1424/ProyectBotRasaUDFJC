@@ -99,6 +99,16 @@ nlu:
     - ¡Hola!
     - Buen día.
     - Hola, ¿cómo estás?
+    - Hola, como estas
+    - hola
+    - hola ahí
+    - hola ahi
+    - buenos días
+    - buenas noches
+    - vamos
+    - hola amigo
+    - buenos dias
+    - buenas tardes
 
 - intent: proporcionar_nombre
   examples: |
